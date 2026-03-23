@@ -34,6 +34,7 @@ Variables clave:
 - `pnpm build`: build del monorepo
 - `pnpm test`: ejecuta pruebas
 - `pnpm typecheck`: verifica tipos en todo el workspace
+- `docker compose up -d --build`: levanta la app en contenedores para producción
 
 ## Flujo funcional
 
@@ -53,3 +54,8 @@ Variables clave:
 - En v1, los PDFs se procesan usando sólo la primera página.
 - Los archivos no válidos o que no son factura no se persisten en base de datos.
 - El almacenamiento de archivos es local y el backend expone `/uploads/*` para preview y descarga.
+
+## Despliegue
+
+- Docker Compose para VPS: [docs/deploy-vps.md](/Users/yeimi/Desktop/curso%20de%20ia/ia-diario-2026/week-6/invoice-processor/docs/deploy-vps.md)
+- Ejemplo de reverse proxy Nginx: [ops/nginx/invoice-processor.conf](/Users/yeimi/Desktop/curso%20de%20ia/ia-diario-2026/week-6/invoice-processor/ops/nginx/invoice-processor.conf)
