@@ -43,12 +43,7 @@ COPY --from=builder /app/packages/types/dist ./packages/types/dist
 
 RUN pnpm install --prod --frozen-lockfile
 
-RUN mkdir -p /app/apps/api/data /app/apps/api/uploads /app/apps/api/node_modules/@invoice-processor/db /app/apps/api/node_modules/@invoice-processor/types
-RUN cp /app/packages/db/package.json /app/apps/api/node_modules/@invoice-processor/db/package.json
-RUN cp -r /app/packages/db/dist /app/apps/api/node_modules/@invoice-processor/db/dist
-RUN cp -r /app/packages/db/drizzle /app/apps/api/node_modules/@invoice-processor/db/drizzle
-RUN cp /app/packages/types/package.json /app/apps/api/node_modules/@invoice-processor/types/package.json
-RUN cp -r /app/packages/types/dist /app/apps/api/node_modules/@invoice-processor/types/dist
+RUN mkdir -p /app/apps/api/data /app/apps/api/uploads
 
 EXPOSE 3001
 
