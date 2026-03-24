@@ -44,4 +44,4 @@ RUN mkdir -p /app/apps/api/data /app/apps/api/uploads
 
 EXPOSE 3001
 
-CMD ["sh", "-c", "node apps/api/dist/db/migrate.js && node apps/api/dist/index.js"]
+CMD ["sh", "-c", "node apps/api/dist/apps/api/src/db/migrate.js && node apps/api/dist/apps/api/src/index.js"]
