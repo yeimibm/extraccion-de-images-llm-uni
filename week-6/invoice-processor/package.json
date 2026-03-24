@@ -11,6 +11,13 @@
     "db:generate": "pnpm --filter @invoice-processor/db drizzle-kit generate",
     "db:migrate": "pnpm --filter @invoice-processor/api db:migrate"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "better-sqlite3",
+      "esbuild",
+      "sharp"
+    ]
+  },
   "devDependencies": {
     "@types/node": "^24.5.2",
     "dotenv-cli": "^8.0.0",
